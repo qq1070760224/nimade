@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/studentFill/studentFill",
+    "pages/teacherFill/teacherFill",
+    "pages/login/login",
+    "pages/guide/guide",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/statistics/statistics",
+    "pages/examine/examine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "卓途教育",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

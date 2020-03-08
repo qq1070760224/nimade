@@ -1,0 +1,7 @@
+<!--pages/guide/guide.wxml-->
+<view style="width:{{windowWidth}}px;height:{{windowHeight}}px;">
+  <image src="/image/login.png"></image>
+  <i-button type="primary" style="position:absolute;left:20%;top:60%;" bindtap="">我是老师</i-button>
+  <i-button type="primary" style="position:absolute;left:20%;top:70%;" bindtap="">我是学生</i-button>
+</view>
+

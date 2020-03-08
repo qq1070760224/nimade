@@ -1,0 +1,17 @@
+<!--pages/login.wxml-->
+<i-panel title="基础用法">
+  <i-input value="{{ value1 }}" type="number" title="手机号" placeholder="请输入手机号" />
+  <i-input value="{{ value2 }}" type="number" title="验证码" autofocus placeholder="验证码" />
+</i-panel>
+
+<form bindsubmit="formSubmit"> 
+   <view class='content'> 
+     <block wx:for="{{Length}}" wx:key="item"> 
+       <input class='iptbox' value="{{Value.length>=index+1?Value[index]:''}}" disabled password='{{ispassword}}' catchtap='Tap'>                  </input> 
+     </block> 
+   </view> 
+   <input name="password" password="{{true}}" class='ipt' maxlength="{{Length}}" focus="{{isFocus}}" bindinput="Focus"></input> 
+   <view> 
+    <button class="btn-area" formType="submit">Submit</button> 
+   </view> 
+</form>

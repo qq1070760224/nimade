@@ -1,0 +1,26 @@
+<!--pages/studentFill/studentFill.wxml-->
+<view>
+  <view wx:if="{{teacherFillShow == '步骤1'}}">
+    <i-input value="{{ value1 }}" title="姓名" autofocus placeholder="名字" />
+    <i-input value="{{ value2 }}" title="年龄" placeholder="请输入年龄" />
+    <i-input value="{{ value3 }}" title="身高" placeholder="请输入身高" />
+    <i-input value="{{ value4 }}" title="体重" placeholder="体重" />
+    <i-input value="{{ value5 }}" title="籍贯" placeholder="籍贯" />
+    <i-input value="{{ value6 }}" title="现住址" placeholder="现住址" />
+    <i-input value="{{ value7 }}" title="QQ号码" placeholder="QQ号码" />
+    <i-input value="{{ value8 }}" title="微信号码" placeholder="微信号码" />
+  </view>
+  <view wx:if="{{teacherFillShow == '步骤2'}}">
+    <i-input value="{{ value9 }}" title="身份证号码" autofocus placeholder="身份证号码" />
+    <i-input value="{{ value10 }}" title="身份证照片" placeholder="身份证照片" />
+    <i-input value="{{ value11 }}" title="是否毕业" placeholder="是否毕业" />
+    <i-input value="{{ value12 }}" title="学历证书" placeholder="学历证书" />
+    <i-input value="{{ value13 }}" title="工作经验" placeholder="工作经验" />
+    <i-input value="{{ value14 }}" title="技能等级" placeholder="技能等级" />
+    <i-input value="{{ value15 }}" title="亲属" placeholder="亲属" />
+  </view>
+  <view style="margin-top: 50px;">
+    <i-button type="primary" bindtap="nextStep">下一步</i-button>
+  </view>
+  <view style="display:flex;justify-content:center;font-size:12px;" bindtap="skip">跳过</view>
+</view>

@@ -1,0 +1,47 @@
+<!--pages/home/home.wxml-->
+<view style="width: 90%; height: 300rpx; background: #f0f0f0; margin: 30rpx auto;">
+  <swiper style="height:100%;" previous-margin="50px;" next-margin="50px;" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- <view style="width: 90%; height: 100px; background: #f0f0f0; margin: 30rpx auto;display:flex;justify-content:space-around;align-items:center;">
+  <view style="display:flex;flex-direction:column;justify-contet:center;align-items:center;" wx:for="{{iconList}}" wx:key="index">
+    <view style="width:100rpx;height:100rpx;">
+      <image src="{{item.src}}"></image>
+    </view>
+    <view>{{item.text}}</view>
+  </view>
+</view> -->
+
+<view class="navbar-wrap">
+  <view class="column {{isFixedTop?'fixed':''}}" id="navbar">
+    <view style="display:flex;flex-direction:column;justify-contet:center;align-items:center;" wx:for="{{iconList}}" wx:key="index">
+      <view style="width:100rpx;height:100rpx;">
+        <image src="{{item.src}}"></image>
+      </view>
+      <view>{{item.text}}</view>
+    </view>
+    <!-- <view class="block active">成为学生</view>
+    <view class="block">成为老师</view>
+    <view class="block">我要赚钱</view> -->
+  </view>
+  <!-- 用于吸顶后 占位用的 -->
+  <view class="column" wx:if="{{isFixedTop}}"></view>
+</view>
+
+
+<block wx:for="{{10}}" wx:key="list">
+  <view style="width: 100%; height: 120rpx; background: #f0f0f0; margin: 20rpx auto;display:flex;justify-content:space-around;">
+    <view style="width:120rpx;height:120rpx;">
+      <image src="/image/73636.png"></image>
+    </view>
+    <view style="display:flex;flex-direction:column;justify-content:center;">
+      <view>标题Caption </view>
+      <view>内容Content</view>
+    </view>
+  </view>
+</block>
