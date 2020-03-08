@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/personalCenter/personalCenter",
     "pages/home/home",
     "pages/studentFill/studentFill",
     "pages/teacherFill/teacherFill",

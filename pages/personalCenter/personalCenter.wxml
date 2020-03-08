@@ -1,0 +1,66 @@
+<!--pages/index/index.wxml-->
+<view>
+	<!-- header 头像部分 -->
+	<view class="header">
+		<image src="https://img2.woyaogexing.com/2020/03/07/9e211559c0534ade8c2293aeec6beb50!400x400.jpeg" class="userHead"></image>
+		<view>
+			<text class="userName">喵小染</text>
+			<view class="statistics">
+				<text>本月招生：328人</text>
+				<text>本月招师：93人</text>
+				<text>本月盈利：36000元</text>
+        <text>{{listHeight}}</text>
+			</view>
+		</view>
+	</view>
+	<!-- nav 导航部分 -->
+	<scroll-view class="scroll-row" scroll-x>
+		<view class="scroll-row-item {{tabIndex === 0 ? 'select' : ''}}" bindtap="tabClick" data-index="0">招收学生</view>
+		<view class="scroll-row-item {{tabIndex === 1 ? 'select' : ''}}" bindtap="tabClick" data-index="1">招收老师</view>
+	</scroll-view>
+	<!-- 师生列表 -->
+  <swiper style="height: {{listHeight}}px;" current="{{tabIndex}}" bindchange="swiperChange">
+    <swiper-item>
+      <scroll-view scroll-y style="height: {{listHeight}}px;">
+        <view class="list">
+          <view class="list-item" hover-class="list-item-hover" wx:for="{{studentList}}" wx:key="index">
+            <image class="list-item-cover" src="{{item.usercover}}"></image>
+            <view class="list-item-inner">
+              <view class="list-item-name">
+                <text>{{item.username}}</text>
+                <text>({{item.nickname}})</text>
+              </view>
+              <view class="list-item-info">
+                <text>{{item.date}}</text>
+                <text> / </text>
+                <text>{{item.profession}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y style="height: {{listHeight}}px;">
+        <view class="list">
+          <view class="list-item" hover-class="list-item-hover" wx:for="{{studentList}}" wx:key="index">
+            <image class="list-item-cover" src="{{item.usercover}}"></image>
+            <view class="list-item-inner">
+              <view class="list-item-name">
+                <text>{{item.username}}</text>
+                <text>({{item.nickname}})</text>
+              </view>
+              <view class="list-item-info">
+                <text>{{item.date}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+
+
+	
+</view>
